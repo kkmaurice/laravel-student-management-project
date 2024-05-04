@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('enrollemts', function (Blueprint $table) {
             $table->id();
+            $table->string('enroll_no');
+            $table->date('join_date');
+            $table->double('fee');
+            $table->foreignId('batch_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

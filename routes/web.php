@@ -4,6 +4,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Models\Batch;
+use App\Models\Enrollemt;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::resource('teachers', TeacherController::class);
 Route::resource('courses', CourseController::class);
 
 Route::resource('batches', Batch::class);
+
+Route::resource('enrollments', Enrollemt::class);
